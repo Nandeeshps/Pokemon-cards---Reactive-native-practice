@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View,StyleSheet,SafeAreaView,Text,Image,ScrollView,Button,Pressable, ActivityIndicator, Alert } from "react-native";
+import Charmander from './componeents/Cards/Charmander';
+import Squirtle from "./componeents/Cards/Squirtle";
+import Bulbasaur from "./componeents/Cards/Bulbasaur";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+function App(){
+  return(
+    <SafeAreaView style={styles.SafeAreaView}>
+    <ScrollView style={styles.scroll}>
+     <Charmander/>
+<Squirtle/>
+   <Bulbasaur/>
+
+    </ScrollView>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  SafeAreaView:{
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 40,
+    paddingBottom:40,
+    paddingLeft: 30,
+    paddingRight: 30,
+    alignItems: "center",
   },
-});
+  scroll:{
+  }
+})
+
+export default App
